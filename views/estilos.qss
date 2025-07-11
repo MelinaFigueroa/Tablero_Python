@@ -1,0 +1,457 @@
+/* estilos.qss - Estilos optimizados para AgileFlow Kanban */
+
+/* === ESTILOS GLOBALES === */
+QWidget {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 12px;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+QMainWindow, QDialog {
+    background-color: #f8f9fa;
+}
+
+/* === TOOLBAR === */
+#toolbar {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #ffffff, stop: 1 #f1f3f4);
+    border-bottom: 2px solid #e9ecef;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#btn-primary {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #4CAF50, stop: 1 #45a049);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#btn-primary:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #45a049, stop: 1 #3d8b40);
+    transform: translateY(-1px);
+}
+
+#btn-primary:pressed {
+    background: #3d8b40;
+    transform: translateY(0px);
+}
+
+QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #ffffff, stop: 1 #f8f9fa);
+    color: #495057;
+    border: 1px solid #ced4da;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #f8f9fa, stop: 1 #e9ecef);
+    border-color: #adb5bd;
+}
+
+QPushButton:pressed {
+    background: #e9ecef;
+    border-color: #6c757d;
+}
+
+/* === COMBOBOX === */
+QComboBox {
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-width: 120px;
+}
+
+QComboBox:hover {
+    border-color: #80bdff;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNiA2TDExIDEiIHN0cm9rZT0iIzZjNzU3ZCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+);
+}
+
+/* === COLUMNAS === */
+#columna-backlog {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #fff3cd, stop: 1 #ffeaa7);
+    border: 2px solid #f39c12;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+#columna-todo {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #e3f2fd, stop: 1 #bbdefb);
+    border: 2px solid #2196f3;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+#columna-in_progress {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #fff8e1, stop: 1 #ffecb3);
+    border: 2px solid #ff9800;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+#columna-review {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #f3e5f5, stop: 1 #e1bee7);
+    border: 2px solid #9c27b0;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+#columna-testing {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #fce4ec, stop: 1 #f8bbd9);
+    border: 2px solid #e91e63;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+#columna-done {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #e8f5e8, stop: 1 #c8e6c9);
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+/* === HEADERS DE COLUMNAS === */
+#header-backlog, #header-todo, #header-in_progress,
+#header-review, #header-testing, #header-done {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 10px;
+    border-bottom: 3px solid;
+}
+
+#header-backlog { border-bottom-color: #f39c12; }
+#header-todo { border-bottom-color: #2196f3; }
+#header-in_progress { border-bottom-color: #ff9800; }
+#header-review { border-bottom-color: #9c27b0; }
+#header-testing { border-bottom-color: #e91e63; }
+#header-done { border-bottom-color: #4caf50; }
+
+#titulo-columna {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    padding: 5px 0;
+}
+
+#contador-columna {
+    font-size: 11px;
+    color: #6c757d;
+    font-weight: normal;
+    margin: 0;
+    padding: 2px 0;
+}
+
+/* === SCROLL AREAS === */
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+
+QScrollArea > QWidget > QWidget {
+    background: transparent;
+}
+
+QScrollBar:vertical {
+    background: #f8f9fa;
+    width: 12px;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #ced4da;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #adb5bd;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* === TARJETAS === */
+#tarjeta {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #ffffff, stop: 1 #fafbfc);
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#tarjeta:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #fafbfc, stop: 1 #f8f9fa);
+    border-color: #80bdff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+#titulo-tarjeta {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+#descripcion-tarjeta {
+    font-size: 11px;
+    color: #6c757d;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+#asignado {
+    font-size: 10px;
+    color: #495057;
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+#story-points {
+    font-size: 10px;
+    color: #495057;
+    background: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+#tags {
+    font-size: 10px;
+    color: #6f42c1;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* === TIPOS DE TAREAS === */
+#tipo-user_story {
+    background: #d4edda;
+    color: #155724;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#tipo-bug {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#tipo-task {
+    background: #cce5ff;
+    color: #004085;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#tipo-epic {
+    background: #e2e3e5;
+    color: #383d41;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#tipo-spike {
+    background: #fff3cd;
+    color: #856404;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* === PRIORIDADES === */
+#prioridad-critica {
+    background: #dc3545;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#prioridad-alta {
+    background: #fd7e14;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#prioridad-media {
+    background: #ffc107;
+    color: #212529;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#prioridad-baja {
+    background: #28a745;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* === DIALOGO DE TAREAS === */
+QDialog {
+    background: white;
+    border-radius: 8px;
+}
+
+QFormLayout QLabel {
+    font-weight: 600;
+    color: #495057;
+    padding: 4px 0;
+}
+
+QLineEdit, QTextEdit {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    background: white;
+    selection-background-color: #007bff;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+QSpinBox {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    background: white;
+}
+
+QSpinBox:focus {
+    border-color: #80bdff;
+}
+
+QDateEdit {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+    background: white;
+}
+
+QDateEdit:focus {
+    border-color: #80bdff;
+}
+
+QDialogButtonBox QPushButton {
+    min-width: 100px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+QDialogButtonBox QPushButton[text="OK"] {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+QDialogButtonBox QPushButton[text="OK"]:hover {
+    background: #0056b3;
+}
+
+QDialogButtonBox QPushButton[text="Cancel"] {
+    background: #6c757d;
+    color: white;
+    border: none;
+}
+
+QDialogButtonBox QPushButton[text="Cancel"]:hover {
+    background: #545b62;
+}
+
+/* === TOOLTIPS === */
+QToolTip {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+/* === ANIMACIONES Y TRANSICIONES === */
+QPushButton, #tarjeta, QComboBox {
+    transition: all 0.2s ease-in-out;
+}
+
+/* === ESTADOS HOVER GLOBALES === */
+QWidget:hover {
+    transition: all 0.2s ease-in-out;
+}
+
+/* === DRAG & DROP VISUAL FEEDBACK === */
+QWidget[dragging="true"] {
+    opacity: 0.7;
+    transform: rotate(2deg);
+}
+
+QWidget[drop-target="true"] {
+    border: 3px dashed #007bff;
+    background: rgba(0, 123, 255, 0.1);
+}
