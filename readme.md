@@ -48,7 +48,9 @@ pip install -r requirements.txt
 ## ▶️ Ejecución
 
 3. Para iniciar la aplicación, ejecutar:
+```bash
 python main.py
+```
 
 **La base de datos agileflow.db se creará automáticamente si no existe.**
 
