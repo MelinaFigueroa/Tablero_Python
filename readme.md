@@ -53,26 +53,27 @@ python main.py
 **La base de datos agileflow.db se creará automáticamente si no existe.**
 
 📁 Estructura del Proyecto
-├── main.py
-├── requirements.txt
-├── README.md
-├── agileflow.db
-├── /models
-│   ├── tarea.py
-│   └── sprint.py
-│   └── usuario.py
-├── /views
-│   ├── tablero.py
-│   ├── tarjeta.py
-│   ├── columna.py
-│   ├── dialogo_sprint.py
-│   └── dialogo_reportes.py
-│   └── vista_sprints.py
-├── /controllers
-│   └── tarea_controller.py
-├── /database
-│   └── db.py
-└── /views/estilos.qss
+--
+    ├── main.py
+    ├── requirements.txt
+    ├── README.md
+    ├── agileflow.db
+    ├── /models
+    │   ├── tarea.py
+    │   ├── sprint.py
+    │   └── usuario.py
+    ├── /views
+    │   ├── tablero.py
+    │   ├── tarjeta.py
+    │   ├── columna.py
+    │   ├── dialogo_sprint.py
+    │   ├── dialogo_reportes.py
+    │   └── vista_sprints.py
+    ├── /controllers
+    │   └── tarea_controller.py
+    ├── /database
+    │   └── db.py
+    └── /views/estilos.qss
 
 ## ⚠️ Notas adicionales
 
